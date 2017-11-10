@@ -32,7 +32,7 @@ public class StartUI extends WechatApi {
 
     private MessageHandle messageHandle;
 
-    private QRCodeFrame qrCodeFrame;
+    //private QRCodeFrame qrCodeFrame;
 
     public StartUI(Environment environment) {
         super(environment);
@@ -69,8 +69,8 @@ public class StartUI extends WechatApi {
             }
             break;
         }
-        qrCodeFrame.setVisible(false);
-        qrCodeFrame.dispose();
+//        qrCodeFrame.setVisible(false);
+//        qrCodeFrame.dispose();
     }
 
     /**
