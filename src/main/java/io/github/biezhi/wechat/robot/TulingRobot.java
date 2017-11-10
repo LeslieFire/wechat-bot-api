@@ -52,6 +52,7 @@ public class TulingRobot extends AbstractMessageHandler {
         String text = groupMessage.getText();
         if (Utils.isNotBlank(text)) {
             String result = getResult(groupMessage.getText());
+            result = "@芭提雅土著 " + result;
             groupMessage.sendText(result, groupMessage.getGroupId());
         }
     }
