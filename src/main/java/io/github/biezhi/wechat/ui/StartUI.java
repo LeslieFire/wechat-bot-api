@@ -48,17 +48,17 @@ public class StartUI extends WechatApi {
             getUUID();
             log.info(Const.LOG_MSG_GET_QRCODE);
             final String qrCodePath = genqrcode();
-            EventQueue.invokeLater(new Runnable() {
-                public void run() {
-                    try {
-                        if (null != qrCodeFrame) qrCodeFrame.dispose();
-                        UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
-                        qrCodeFrame = new QRCodeFrame(qrCodePath);
-                    } catch (Exception e) {
-                        log.error("显示二维码失败", e);
-                    }
-                }
-            });
+//            EventQueue.invokeLater(new Runnable() {
+//                public void run() {
+//                    try {
+//                        if (null != qrCodeFrame) qrCodeFrame.dispose();
+//                        UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+//                        qrCodeFrame = new QRCodeFrame(qrCodePath);
+//                    } catch (Exception e) {
+//                        log.error("显示二维码失败", e);
+//                    }
+//                }
+//            });
             log.info(Const.LOG_MSG_SCAN_QRCODE);
             if (!waitforlogin(1)) {
                 continue;
